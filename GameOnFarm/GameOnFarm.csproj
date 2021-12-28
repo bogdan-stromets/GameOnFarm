@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35A883BA-49FC-4ABC-9296-1A770B9933F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameOnFarm</RootNamespace>
+    <AssemblyName>GameOnFarm</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>duck_round.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChooseDifficult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseDifficult.Designer.cs">
+      <DependentUpon>ChooseDifficult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Answers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Answers.Designer.cs">
+      <DependentUpon>Answers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms.cs" />
+    <Compile Include="Rules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rules.Designer.cs">
+      <DependentUpon>Rules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stats.Designer.cs">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartScreen.Designer.cs">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Answers.resx">
+      <DependentUpon>Answers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rules.resx">
+      <DependentUpon>Rules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartScreen.resx">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseDifficult.resx">
+      <DependentUpon>ChooseDifficult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Stats.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicken_yelloy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow_violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabbit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabbit_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duck_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elephant_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frog_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giraffe_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goat_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gorilla_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hippo_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horse_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monkey_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moose_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\narwhal_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\owl_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panda_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parrot_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\penguin_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabbit_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rhino_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sloth_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snake_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walrus_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whale_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zebra_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bear_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buffalo_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chick_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicken_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crocodile_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog_sqare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chick_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\кнопка1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Correct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPDXMLib">
+      <Guid>{73F0DD5C-D071-46B6-A8BF-897C84EAAC49}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLauncher">
+      <Guid>{5CB42160-CD7C-4806-9367-1C4A65153F4A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Angry Birds.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_blur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star2-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="duck_round.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
